@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="夢幻森林旅店">
+<meta name="theme-color" content="#B9A7E8">
+<title>Susu &amp; Neko 夢幻森林旅店｜默書遊戲</title>
+<meta name="description" content="Susu 和 Neko 陪你玩遊戲溫默書：第八課詞語、第十二課《森林旅店（上）》，香港粵語讀音。">
+<link rel="icon" href="img/bunny.webp">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<header class="bar">
+  <button class="pill back" id="backBtn" aria-label="返回旅店大堂">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>大堂
+  </button>
+  <div class="brand" id="brand">Susu <span>&amp;</span> Neko<small>夢幻森林旅店</small></div>
+  <div class="bar-r">
+    <div class="pill stars" aria-label="星星"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><b id="starTotal">0</b><small>/21</small></div>
+    <button class="pill icon" id="muteBtn" aria-label="聲音開關">
+      <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4h4l5 4V6L7 10z"/><path d="M16 9a4 4 0 010 6M18.5 6.5a8 8 0 010 11"/></svg>
+      <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4h4l5 4V6L7 10z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="app">
+  <!-- HOME -->
+  <section class="screen on" id="s-home">
+    <div class="hero">
+      <img class="hero-img" src="img/duo.webp" alt="Susu 和 Neko 拖着手揮手打招呼" width="633" height="760">
+      <div class="hero-txt">
+        <p class="kicker">默書遊戲樂園</p>
+        <h1>夢幻<br>森林旅店</h1>
+        <p class="lead">第八課詞語 ・ 第十二課《森林旅店（上）》</p>
+        <button class="btn big pink" id="helloBtn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>聽 Susu 同 Neko 講</button>
+      </div>
+    </div>
+
+    <h2 class="sec"><span>（一）</span>第八課詞語</h2>
+    <div class="rooms">
+      <button class="room" data-go="bubble" style="--c:#FFB3CF;--c2:#FFE3EE">
+        <span class="no">101</span><span class="rt">星星泡泡</span><span class="rd">聽讀音，篤穿寫啱嘅泡泡</span><span class="rs" data-stars="bubble"></span>
+      </button>
+      <button class="room" data-go="match" style="--c:#B8A6F2;--c2:#ECE6FF">
+        <span class="no">102</span><span class="rt">翻翻魔法卡</span><span class="rd">詞語同意思配成一對</span><span class="rs" data-stars="match"></span>
+      </button>
+      <button class="room" data-go="writeW" style="--c:#8FD3C8;--c2:#DDF5F0">
+        <span class="no">103</span><span class="rt">魔法聽寫・詞語</span><span class="rd">聽讀音，喺田字格寫出嚟</span><span class="rs" data-stars="writeW"></span>
+      </button>
+    </div>
+
+    <h2 class="sec"><span>（二）</span>第十二課《森林旅店（上）》</h2>
+    <div class="rooms">
+      <button class="room" data-go="magic" style="--c:#FFC98F;--c2:#FFEFD9">
+        <span class="no">201</span><span class="rt">魔法補字</span><span class="rd">句子唔見咗詞語，補返佢</span><span class="rs" data-stars="magic"></span>
+      </button>
+      <button class="room" data-go="order" style="--c:#9CC7F5;--c2:#E2EFFD">
+        <span class="no">202</span><span class="rt">小兔執房間</span><span class="rd">將句子排返啱嘅次序</span><span class="rs" data-stars="order"></span>
+      </button>
+      <button class="room" data-go="candy" style="--c:#F7A8A8;--c2:#FFE6E3">
+        <span class="no">203</span><span class="rt">標點糖果屋</span><span class="rd">揀啱標點糖果放入格</span><span class="rs" data-stars="candy"></span>
+      </button>
+      <button class="room wide" data-go="writeS" style="--c:#C7A8E8;--c2:#F2E8FC">
+        <span class="no">204</span><span class="rt">模擬默書</span><span class="rd">好似老師讀默書咁，逐句聽、逐句寫（讀埋標點）</span><span class="rs" data-stars="writeS"></span>
+      </button>
+    </div>
+
+    <div class="lesson-card">
+      <img src="img/bunny.webp" alt="小兔旅店老闆" class="lc-bunny" width="433" height="520">
+      <div class="lc-body">
+        <div class="lc-head"><h3>森林旅店（上）</h3>
+          <button class="btn small mint" id="readAll"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>全課朗讀</button>
+        </div>
+        <div class="lesson" id="lesson"></div>
+        <p class="hint">按任何一段，聽小兔讀俾你聽。</p>
+      </div>
+    </div>
+    <footer class="foot">讀音：香港粵語（女聲）・ 適合 iPad 及手機使用</footer>
+  </section>
+
+  <!-- GAME SCREEN (shared) -->
+  <section class="screen" id="s-game">
+    <div class="g-top">
+      <h2 id="gTitle"></h2>
+      <div class="g-prog"><div class="g-bar"><i id="gBar"></i></div><span id="gCount"></span></div>
+    </div>
+    <div class="guide" id="guide">
+      <img id="guideImg" src="img/neko_point.webp" alt="">
+      <div class="bubble" id="guideTxt"></div>
+    </div>
+    <div class="stage" id="stage"></div>
+  </section>
+</main>
+
+<div class="pop" id="pop" aria-live="polite"><img id="popImg" src="img/susu_cheer.webp" alt=""><div id="popTxt"></div></div>
+<canvas class="fx" id="fx"></canvas>
+
+<script src="data.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
